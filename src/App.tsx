@@ -1,9 +1,24 @@
-import Home from './pages/Home/Home.tsx'
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import Navbar from "./components/Navbar/Navbar"
+import Home from "./pages/Home/Home"
+import Login from "./pages/Login/Login.tsx"
+import Footer from "./components/Footer/Footer"
 
 function App() {
-
   return (
-    <Home />
+    <>
+      <BrowserRouter>
+        <Navbar/>
+        <div className="min-h-[80vh]">
+          <Routes>
+            <Route path="/" element={<Home/>} />
+            <Route path="/login" element={<Login/>} />
+            <Route path="/home" element={<Home/>} />
+          </Routes>
+        </div>
+        <Footer/>
+      </BrowserRouter>
+    </>
   )
 }
 

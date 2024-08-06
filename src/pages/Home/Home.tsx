@@ -1,30 +1,24 @@
-import './Home.css'
-import MyImage from '../../assets/mulheres-rindo.jpg'
+// import React from 'react'
 
 function Home() {
-    return (
-        <>
-        <nav>
-            <h2>Blog Pessoal</h2>
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Nova Publicação</a></li>
-                <li><a href="">Login</a></li>
-            </ul>
-        </nav>
-        <section className='grid'>
-            <div className='grid-texto'>
-                <h1>Blog Pessoal</h1>
-                <h2>Seja bem-vinde ao blog, libere sua imaginação!</h2>
-                <p>Este é um espaço onde você pode compartilhar suas ideias, ler artigos interessantes e gerenciar suas postagens. Sinta-se à vontade para criar novas publicações, explorar o conteúdo dos outros usuários e excluir aquelas que não deseja mais manter. Aproveite a experiência e participe ativamente da nossa comunidade!</p>
+  return (
+    <>
+        <div className='bg-indigo-900 flex justify-center'>
+            <div className='container grid grid-cols-2 text-white'>
+                <div className='flex flex-col gap-4 items-center justify-center py-4'>
+                    <h2 className='text-5xl font-bold'>Seja bem-vinde!</h2>
+                    <p className='text-xl'>Expresse aqui seus pensamentos e opiniões</p>
+                    <div className='flex justify-around gap-4'>
+                        <button className='rounded bg-white text-blue-800 py-2 px-4'>Ver postagens</button>
+                    </div>
+                </div>
+                <div className='flex justify-center'>
+                    <img src="{homeLogo}" alt="" className='w-2/3' />
+                </div>
             </div>
-            <div className='grid-imagem'>
-                <img src={MyImage} alt="Duas mulheres rindo" />
-            </div>
-        </section>
-            
-        </>
-    )
+        </div>
+    </>
+  )
 }
 
-export default Home;
+export default Home
