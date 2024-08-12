@@ -3,6 +3,7 @@
 import { useContext } from "react"
 import { UserContext } from "../../contexts/UserContext"
 import { Link } from "react-router-dom";
+import homeLogo from '../../assets/home.png'
 
 function Home() {
     const {nome, setNome} = useContext(UserContext);
@@ -18,7 +19,7 @@ function Home() {
                     </div>
                 </div>
                 <div className='flex justify-center'>
-                    <img src="{homeLogo}" alt="" className='w-2/3' />
+                    <img src={homeLogo} alt="" className='w-2/3' />
                 </div>
             </div>
         </div>
