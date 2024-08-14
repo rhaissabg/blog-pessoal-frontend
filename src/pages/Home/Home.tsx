@@ -1,12 +1,9 @@
 // import React from 'react'
-
-import { useContext } from "react"
-import { UserContext } from "../../contexts/UserContext"
-import { Link } from "react-router-dom";
 import homeLogo from '../../assets/home.png'
+import ListaPostagens from "../../components/Postagens/listaPostagens/ListaPostagens";
+import ModalPostagem from "../../components/Postagens/modalPostagem/ModalPostagem";
 
 function Home() {
-    const {nome, setNome} = useContext(UserContext);
   return (
     <>
         <div className='bg-indigo-900 flex justify-center'>
@@ -15,6 +12,7 @@ function Home() {
                     <h2 className='text-5xl font-bold'>Seja bem-vinde!</h2>
                     <p className='text-xl'>Expresse aqui seus pensamentos e opiniões</p>
                     <div className='flex justify-around gap-4'>
+                        <ModalPostagem />
                         <button className='rounded bg-white text-blue-800 py-2 px-4'>Ver postagens</button>
                     </div>
                 </div>
@@ -25,6 +23,7 @@ function Home() {
         </div>
         <div className='flex justify-center items-center'>
     </div>
+    <ListaPostagens />
     </>
   );
 }
